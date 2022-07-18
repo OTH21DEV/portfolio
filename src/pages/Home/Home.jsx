@@ -1,11 +1,13 @@
-//import logo from './logo.svg';
+
 import Loader from "../../components/Loader/Loader"
-//import '../../';
+import Intro from "../../components/Intro/Intro"
+
 
 function App() {
   return (
     <div className="App">
      <Loader></Loader>
+     <Intro></Intro>
     </div>
   );
 }

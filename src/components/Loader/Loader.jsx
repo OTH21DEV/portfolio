@@ -3,6 +3,9 @@
 import "../../components/Loader/Loader.css";
 import anime from "animejs";
 import React from "react";
+//import styled,{ keyframes } from "styled-components";
+
+
 
 function Loader() {
 
@@ -14,7 +17,7 @@ function Loader() {
     console.log(textWrapper);
 
     anime
-      .timeline({ loop: true })
+      .timeline({ loop: false })
       .add({
         targets: ".letters .letter",
         translateX: [40, 0],
@@ -34,7 +37,11 @@ function Loader() {
       });
   }, []);
 
-  return <div className="letters">{`Welcome ${'\xa0'} to ${'\xa0'} my ${'\xa0'}portfolio`}</div>;
+  return (
+    <div className="wrapper">
+  <div className="letters">{`Welcome ${'\xa0'} to ${'\xa0'} my ${'\xa0'}portfolio`}</div>
+  </div>
+  );
 }
 
 export default Loader;
