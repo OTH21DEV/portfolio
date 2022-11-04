@@ -1,13 +1,16 @@
+import Loader from "../../components/Loader/Loader";
+import Intro from "../../components/Intro/Intro";
 
-import Loader from "../../components/Loader/Loader"
-import Intro from "../../components/Intro/Intro"
 
 
 function App() {
+
+
   return (
     <div className="App">
-     <Loader></Loader>
-     <Intro></Intro>
+
+      <Loader></Loader>
+      <Intro></Intro>
     </div>
   );
 }

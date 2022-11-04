@@ -15,7 +15,15 @@ function Loader() {
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     console.log(textWrapper);
-
+    
+    function preventScroll(e){
+      e.preventDefault();
+      e.stopPropagation();
+  
+      return false;
+  }
+  
+    document.querySelector('.wrapper').addEventListener('wheel', preventScroll, {passive: false});
     anime
       .timeline({ loop: false })
       .add({
