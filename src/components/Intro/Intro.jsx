@@ -1,28 +1,77 @@
 import "../../components/Intro/Intro.css";
-import React,{ useEffect } from "react";
+import React, { useEffect } from "react";
+import img from "../../assets/img.jpg";
 
 function Intro() {
-    useEffect(() => {
+  useEffect(() => {
     let section = document.querySelector("section");
+    let side1 = document.getElementById("side1");
+    let side2 = document.getElementById("side2");
+    window.addEventListener("scroll", function () {
+      if (!window.pageYOffset) {
+        section.style.backgroundColor = "#222831";
+      } else {
+        section.style.background = "#dddddd";
+        side1.style.left = -window.pageYOffset + "px";
+        side2.style.left = window.pageYOffset + "px";
+      }
+    });
+  }, []);
 
-  window.addEventListener("scroll", function () {
-    let value = window.scrollY;
-    section.style.clipPath = "circle(" + value + "px at center)";
-  });
-}, []);
   return (
     <div className="test">
-      <h2 className="title">Scroll to find more about me...</h2>
-      <section></section>
-      <div className="container">
-        <h2>Some information here </h2>
+      <section>
+        <h2 className="title">Scroll to find more about me...</h2>
+        <div className="side" id="side1"></div>
+        <div className="side" id="side2"></div>
+      </section>
+
+      <div className="contentBx">
+        <h2>Hi, I'm Oxana - front end developper</h2>
         <p>
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-          vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-          porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
-          velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, molestias doloremque perspiciatis nam atque sapiente error libero quaerat veniam expedita accusantium delectus at pariatur
+          blanditiis commodi dolorum distinctio modi aspernatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, molestias doloremque perspiciatis nam atque sapiente error libero
+          quaerat veniam expedita accusantium delectus at pariatur blanditiis commodi dolorum distinctio modi aspernatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, molestias
+          doloremque perspiciatis nam atque sapiente error libero quaerat veniam expedita accusantium delectus at pariatur blanditiis commodi dolorum distinctio modi aspernatur. Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit. Fugit, molestias doloremque perspiciatis nam atque sapiente error libero quaerat veniam expedita accusantium delectus at pariatur blanditiis commodi
+          dolorum distinctio modi aspernatur. pedita accusantium delectus at pariatur blanditiis commodi dolorum distinctio modi aspernatur.
         </p>
+      </div>
+
+
+      <div className="container">
+     
+        <div className="wraptest">
+          <div className="wrap">
+            <div className="information">
+              <img src={img} alt=""></img>
+              <h3>Oxana Theis</h3>
+            </div>
+
+            <div className="about">
+              <span>
+                <i class="fa-solid fa-house"></i>Home
+              </span>
+              <span>
+                <i class="fas fa-images"></i>Recent Projects
+              </span>
+              <span>
+                <i class="fas fa-hand-holding"></i>What I Offer
+              </span>
+            </div>
+
+            <div className="wrapper-contact">
+              <h3>Got a project to discuss?</h3>
+              <h4>Let's talk talk about it</h4>
+              <button>Email me</button>
+            </div>
+          </div>
+          <div className="projects">
+            <h3>Recent Projects</h3>
+
+            <div className="testproject"></div>
+          </div>
+        </div>
       </div>
     </div>
   );

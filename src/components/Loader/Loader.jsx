@@ -39,7 +39,7 @@ function Loader() {
 
   return (
     <div className="wrapper">
-  <div className="letters">{`Welcome ${'\xa0'} to ${'\xa0'} my ${'\xa0'}portfolio`}</div>
+  <div className="letters">Welcome to my portfolio</div>
   </div>
   );
 }
