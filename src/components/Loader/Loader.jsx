@@ -3,7 +3,7 @@
 import "../../components/Loader/Loader.css";
 import anime from "animejs";
 import React from "react";
-//import styled,{ keyframes } from "styled-components";
+
 
 
 
