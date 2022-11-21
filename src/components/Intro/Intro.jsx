@@ -1,5 +1,5 @@
 import "../../components/Intro/Intro.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Card from "../Card/Card";
 
 import first from "../../assets/01.svg";
@@ -14,14 +14,14 @@ import leaf1 from "../../assets/leaf1.png";
 import leaf2 from "../../assets/leaf2.png";
 import leaf3 from "../../assets/leaf3.png";
 import github from "../../assets/github.svg";
-import testleaf1 from "../../assets/testleaf1.png";
-import testleaf2 from "../../assets/testleaf2.png";
+
 import { Waypoint } from "react-waypoint";
 
 function Intro() {
-  useEffect(() => {
-    let mySection = document.querySelector(".contentBx");
+  const [contentBx, setContentBx] = useState(true);
 
+  useEffect(() => {
+    //
     window.scrollTo({ top: 0, behavior: "smooth" });
 
     let section = document.querySelector("section");
@@ -31,60 +31,25 @@ function Intro() {
     window.addEventListener("scroll", function (e) {
       if (!window.pageYOffset) {
         section.style.backgroundColor = "#222831";
+        //add function to cancel the hash while navigate
         let loc = window.location.href,
-          //add function to cancel the hash while navigate
           index = loc.indexOf("#");
 
         if (index > 0) {
           window.location = loc.substring(0, index);
         }
       } else if (window.pageYOffset > 600) {
-        /*
-      if (window.location.reload()) {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } 
-      
-      */
+        console.log("suis plus 600");
+        document.querySelector(".nav").classList.add("nav-animation");
+        document.querySelector(".ab").classList.add("li-animation");
+        document.querySelector(".pr").classList.add("li-animation");
+        document.querySelector(".cont").classList.add("li-animation");
+        document.querySelector(".res").classList.add("li-animation");
 
-        document.querySelector(".nav").style.animation = "fadeIn 0.6s forwards ease";
-        document.querySelector(".ab").style.animation = "showLi 0.2s forwards ease";
-        document.querySelector(".ab").style.animationDelay = "0.6s";
-
-        document.querySelector(".pr").style.animation = "showLi 0.2s forwards ease";
-        document.querySelector(".pr").style.animationDelay = "0.7s";
-
-        document.querySelector(".cont").style.animation = "showLi 0.2s forwards ease";
-        document.querySelector(".cont").style.animationDelay = "0.8s";
-
-        document.querySelector(".res").style.animation = "showLi 0.2s forwards ease";
-        document.querySelector(".res").style.animationDelay = "0.9s";
-
-        document.querySelector(".contentBx h2").style.animation = "showLi 0.6s forwards ease";
+        document.querySelector(".contentBx h2").style.animation = "showLi 0.6s both ease";
         document.querySelector(".contentBx h2").style.animationDelay = "0.9s";
-        document.querySelector(".contentBx p").style.animation = "showLi 0.6s forwards ease";
+        document.querySelector(".contentBx p").style.animation = "showLi 0.6s both ease";
         document.querySelector(".contentBx p").style.animationDelay = "1.2s";
-
-        /*
-        document.querySelector(".nav").style.animation = "fadeIn forwards 0.6s ease";
-        document.querySelector(".ab").style.animation = "showLi forwards  0.2s ease";
-        document.querySelector(".ab").style.animationDelay = "0.6s";
-
-        document.querySelector(".pr").style.animation = "showLi forwards 0.2s ease";
-        document.querySelector(".pr").style.animationDelay = "0.7s";
-
-        document.querySelector(".cont").style.animation = "showLi forwards 0.2s ease";
-        document.querySelector(".cont").style.animationDelay = "0.8s";
-
-        document.querySelector(".res").style.animation = "showLi forwards 0.2s ease";
-        document.querySelector(".res").style.animationDelay = "0.9s";
-
-        document.querySelector(".contentBx h2").style.animation = "showLi forwards 0.6s ease";
-        document.querySelector(".contentBx h2").style.animationDelay = "0.9s";
-        document.querySelector(".contentBx p").style.animation = "showLi forwards 0.6s ease";
-        document.querySelector(".contentBx p").style.animationDelay = "1.2s";
-
-
-*/
 
         /*
         document.querySelector(".text-flow").style.animation = "fadeIn 0.6s forwards ease-out";
@@ -95,45 +60,18 @@ function Intro() {
         side1.style.left = -window.pageYOffset + "px";
         side2.style.left = window.pageYOffset + "px";
       } else {
+        console.log("suis moins 600");
         document.querySelector(".contentBx p").style.animation = "fadeOut forwards 0.3s ease";
         //   document.querySelector(".contentBx p").style.animationDelay = "1.2s";
 
         document.querySelector(".contentBx h2").style.animation = "fadeOut forwards 0.3s ease-out";
         document.querySelector(".contentBx h2").style.animationDelay = "0.2s";
-        /*
-        document.querySelector(".res").style.animation = "hideLi forwards 0.2s ease";
-        document.querySelector(".res").style.animationDelay = "0.3s";
-        document.querySelector(".cont").style.animation = "hideLi forwards 0.2s ease";
-        document.querySelector(".cont").style.animationDelay = "0.4s";
-        document.querySelector(".pr").style.animation = "hideLi forwards 0.2s ease";
-        document.querySelector(".pr").style.animationDelay = "0.5s";
-        document.querySelector(".ab").style.animation = "hideLi forwards 0.2s ease";
-        document.querySelector(".ab").style.animationDelay = "0.6s";
-        document.querySelector(".nav").style.animation = "fadeOut forwards 0.6s ease-out";
-        document.querySelector(".nav").style.animationDelay = "0.6s";
-*/
-        /*
-        document.querySelector(".res").style.animation = "showLi backwards 0.2s ease";
-        document.querySelector(".res").style.animationDelay = "0.3s";
-        document.querySelector(".cont").style.animation = "showLi backwards 0.2s ease";
-        document.querySelector(".cont").style.animationDelay = "0.4s";
-        document.querySelector(".pr").style.animation = "showLi backwards 0.2s ease";
-        document.querySelector(".pr").style.animationDelay = "0.5s";
-        document.querySelector(".ab").style.animation = "showLi backwards 0.2s ease";
-        document.querySelector(".ab").style.animationDelay = "0.6s";
-        document.querySelector(".nav").style.animation = "fadeIn backwards 0.6s ease-out";
-        document.querySelector(".nav").style.animationDelay = "0.6s";
-*/
-        document.querySelector(".res").style.animation = "hideLi 0.2s backwards ease";
-        document.querySelector(".res").style.animationDelay = "0.3s";
-        document.querySelector(".cont").style.animation = "hideLi 0.2s backwards ease";
-        document.querySelector(".cont").style.animationDelay = "0.4s";
-        document.querySelector(".pr").style.animation = "hideLi 0.2s backwards ease";
-        document.querySelector(".pr").style.animationDelay = "0.5s";
-        document.querySelector(".ab").style.animation = "hideLi 0.2s backwards ease";
-        document.querySelector(".ab").style.animationDelay = "0.6s";
-        document.querySelector(".nav").style.animation = "fadeOut 0.6s backwards ease-out";
-        document.querySelector(".nav").style.animationDelay = "0.6s";
+
+        document.querySelector(".nav").classList.remove("nav-animation");
+        document.querySelector(".ab").classList.remove("li-animation");
+        document.querySelector(".pr").classList.remove("li-animation");
+        document.querySelector(".cont").classList.remove("li-animation");
+        document.querySelector(".res").classList.remove("li-animation");
 
         section.style.background = "#dddddd";
         side1.style.left = -window.pageYOffset + "px";
@@ -179,7 +117,7 @@ function Intro() {
     init();
     smoothScroll();
   }, []);
-  const [contentBx, setContentBx] = useState(true);
+
   /**
  * 
  *    
@@ -202,7 +140,7 @@ function Intro() {
               About
             </a>
 
-            <a className={contentBx ? "pr" : "pr active"}href="#projectss">
+            <a className={contentBx ? "pr" : "pr active"} href="#projectss">
               Projects
             </a>
 
@@ -245,7 +183,7 @@ function Intro() {
             </div>
           </div>
 
-          <Waypoint bottomOffset='-600px' scrollableAncestor={window} debug={true} onEnter={() => setContentBx(true)} onLeave={() => setContentBx(false)} />
+          <Waypoint bottomOffset="-600px" scrollableAncestor={window} onEnter={() => setContentBx(true)} onLeave={() => setContentBx(false)} />
         </div>
       </div>
       <div className="container" id="projectss">
