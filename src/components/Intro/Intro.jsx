@@ -16,6 +16,7 @@ import leaf3 from "../../assets/leaf3.png";
 import github from "../../assets/github.svg";
 
 import { Waypoint } from "react-waypoint";
+import Header from "../Header/Header";
 
 function Intro() {
   const [contentBx, setContentBx] = useState(true);
@@ -40,12 +41,13 @@ function Intro() {
         }
       } else if (window.pageYOffset > 600) {
         console.log("suis plus 600");
+        /*
         document.querySelector(".nav").classList.add("nav-animation");
         document.querySelector(".ab").classList.add("li-animation");
         document.querySelector(".pr").classList.add("li-animation");
         document.querySelector(".cont").classList.add("li-animation");
         document.querySelector(".res").classList.add("li-animation");
-
+*/
         document.querySelector(".contentBx h2").style.animation = "showLi 0.6s both ease";
         document.querySelector(".contentBx h2").style.animationDelay = "0.9s";
         document.querySelector(".contentBx p").style.animation = "showLi 0.6s both ease";
@@ -66,13 +68,13 @@ function Intro() {
 
         document.querySelector(".contentBx h2").style.animation = "fadeOut forwards 0.3s ease-out";
         document.querySelector(".contentBx h2").style.animationDelay = "0.2s";
-
+        /*
         document.querySelector(".nav").classList.remove("nav-animation");
         document.querySelector(".ab").classList.remove("li-animation");
         document.querySelector(".pr").classList.remove("li-animation");
         document.querySelector(".cont").classList.remove("li-animation");
         document.querySelector(".res").classList.remove("li-animation");
-
+*/
         section.style.background = "#dddddd";
         side1.style.left = -window.pageYOffset + "px";
         side2.style.left = window.pageYOffset + "px";
@@ -118,12 +120,6 @@ function Intro() {
     smoothScroll();
   }, []);
 
-  /**
- * 
- *    
-        onEnter={() => setContentBx(true)}
-        onLeave={() => setContentBx(false)}
- */
   return (
     <>
       <div className="test">
@@ -135,6 +131,8 @@ function Intro() {
         </section>
 
         <div className="contentBx">
+          <Header contentBxSection={contentBx} setSection={setContentBx}></Header>
+          {/*
           <div className="nav">
             <a className={contentBx ? "ab" : "ab active"} href="#aboutt">
               About
@@ -152,6 +150,7 @@ function Intro() {
               Resume
             </a>
           </div>
+  */}
           <h2 id="aboutt">
             <span style={{ color: "#222831", fontSize: "0.4em", marginBottom: "7px" }}>Hi, my name is</span>
             <br />

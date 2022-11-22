@@ -1,0 +1,220 @@
+/*
+NAV HEADER MENU
+*/
+/*
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    opacity: 0;
+    backdrop-filter: blur(5px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(161, 161, 161, 0.05);
+    
+  }
+*/
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  opacity: 0;
+  backdrop-filter: blur(5px);
+  z-index: 99999;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(161, 161, 161, 0.05);
+}
+
+.ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+/*
+  Add class to the nav to animate while scroll > 600 pageYOffset
+  */
+.nav-animation {
+  animation: fadeIn forwards 0.6s ease;
+}
+
+.link-about,
+.link-projects,
+.link-contact,
+.link-resume {
+  color: #16a085;
+  color: #4f5c3b;
+  text-decoration: none;
+  position: relative;
+  opacity: 0;
+  font-size: 1.1em;
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
+  /*  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);*/
+}
+
+/*
+  Add class "link-animation" to the nav link element to animate while scroll > 600 pageYOffset
+  */
+
+.link-animation {
+  animation: showLi 0.2s forwards ease;
+}
+
+.link-about.link-animation {
+  animation-delay: 0.6s;
+}
+
+.link-projects.link-animation {
+  animation-delay: 0.7s;
+}
+.link-contact.link-animation {
+  animation-delay: 0.8s;
+}
+.link-resume.link-animation {
+  animation-delay: 0.9s;
+
+
+}
+
+/*
+Styling the changes of nav elements when the view is in the projets section
+*/
+
+/*
+  Add class "changeColor" if the contentBx section isnt in the view  
+  and view is in the projects section
+  */
+
+.link-about.changeColor,
+.link-projects.changeColor,
+.link-contact.changeColor,
+.link-resume.changeColor {
+  color: whitesmoke;
+}
+
+/*
+Change the initial green border line on hover 
+when the view is in the projects section
+*/
+.link-about.changeColor:hover::before,
+.link-projects.changeColor:hover::before,
+.link-contact.changeColor:hover::before
+{
+   
+    background-color: whitesmoke;
+}
+
+.link-about.changeColor:hover::after,
+.link-projects.changeColor:hover::after,
+.link-contact.changeColor:hover::after{
+   
+    background-color: whitesmoke;
+}
+
+
+/* 
+  Style  :before and :after element's width increased from 0 to 100% 
+  */
+
+.link-about:after,
+  .link-projects:after,
+  .link-contact:after,
+  
+  .link-about:before,
+  .link-projects:before,
+  .link-contact:before/*,
+  .res:before */ {
+  content: "";
+  position: absolute;
+  position: relative;
+  width: 0%;
+  display: block;
+  height: 1px;
+  transition: all 0.3s ease;
+  margin-top: 2px;
+  transition: all 300ms ease-in;
+}
+
+.link-about:before,
+.link-projects:before,
+.link-contact:before {
+  top: 25%;
+  right: 0;
+}
+
+.link-about:after,
+.link-projects:after,
+.link-contact:after {
+  bottom: 25%;
+  left: 0;
+}
+
+.link-about:hover::before,
+.link-projects:hover::before,
+.link-contact:hover::before {
+  width: 100%;
+  height: 1px;
+  top: 25%;
+  background-color: #4f5c3b;
+}
+
+.link-about:hover::after,
+.link-projects:hover::after,
+.link-contact:hover::after {
+  width: 100%;
+  height: 1.7px;
+  bottom: 25%;
+  background-color: #4f5c3b;
+}
+
+/*
+Spesial style of resume link with border animation 
+*/
+
+.link-resume{
+  position: relative;
+  padding-bottom: 0;
+}
+.link-resume::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dashed #4f5c3b;
+  animation: clippath 2s infinite linear;
+}
+
+@keyframes clippath {
+  0%,
+  100% {
+    clip-path: inset(0 0 95% 0);
+  }
+  25% {
+    clip-path: inset(0 95% 0 0);
+  }
+  50% {
+    clip-path: inset(95% 0 0 0);
+  }
+  75% {
+    clip-path: inset(0 0 0 95%);
+  }
+}
