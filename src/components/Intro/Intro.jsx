@@ -10,13 +10,15 @@ import five from "../../assets/05.svg";
 import six from "../../assets/06.svg";
 import seven from "../../assets/07.svg";
 import eight from "../../assets/08.svg";
-import leaf1 from "../../assets/leaf1.png";
-import leaf2 from "../../assets/leaf2.png";
-import leaf3 from "../../assets/leaf3.png";
+
 import github from "../../assets/github.svg";
 
 import { Waypoint } from "react-waypoint";
 import Header from "../Header/Header";
+import TextFlow from "../TextFlow/TextFlow";
+import FloatingTitle from "../FloatingTitle/FloatingTitle";
+import Leafs from "../Leafs/Leafs";
+import Footer from "../Footer/Footer";
 
 function Intro() {
   const [contentBx, setContentBx] = useState(true);
@@ -40,14 +42,6 @@ function Intro() {
           window.location = loc.substring(0, index);
         }
       } else if (window.pageYOffset > 600) {
-        console.log("suis plus 600");
-        /*
-        document.querySelector(".nav").classList.add("nav-animation");
-        document.querySelector(".ab").classList.add("li-animation");
-        document.querySelector(".pr").classList.add("li-animation");
-        document.querySelector(".cont").classList.add("li-animation");
-        document.querySelector(".res").classList.add("li-animation");
-*/
         document.querySelector(".contentBx h2").style.animation = "showLi 0.6s both ease";
         document.querySelector(".contentBx h2").style.animationDelay = "0.9s";
         document.querySelector(".contentBx p").style.animation = "showLi 0.6s both ease";
@@ -68,56 +62,12 @@ function Intro() {
 
         document.querySelector(".contentBx h2").style.animation = "fadeOut forwards 0.3s ease-out";
         document.querySelector(".contentBx h2").style.animationDelay = "0.2s";
-        /*
-        document.querySelector(".nav").classList.remove("nav-animation");
-        document.querySelector(".ab").classList.remove("li-animation");
-        document.querySelector(".pr").classList.remove("li-animation");
-        document.querySelector(".cont").classList.remove("li-animation");
-        document.querySelector(".res").classList.remove("li-animation");
-*/
+
         section.style.background = "#dddddd";
         side1.style.left = -window.pageYOffset + "px";
         side2.style.left = window.pageYOffset + "px";
       }
     });
-
-    const scrollable = document.querySelector(".scrollable");
-    let current = 0;
-    let target = 0;
-    const ease = 0.1;
-
-    const stickyProject = document.querySelector(".project");
-
-    function lerp(start, end, t) {
-      return start * (1 - t) + end * t;
-    }
-
-    function init() {
-      document.body.style.height = `${scrollable.getBoundingClientRect().height}px`;
-    }
-    function smoothScroll() {
-      target = window.scrollY;
-      current = lerp(current, target, ease);
-      scrollable.style.transform = `translate3d(0,${-current}px,0)`;
-      sticky();
-      window.requestAnimationFrame(smoothScroll);
-    }
-
-    function sticky() {
-      let offset = window.innerHeight;
-      // let offset = window.innerHeight*2;
-      if (current < offset) {
-        stickyProject.style.transform = `translate3d(0,0,0)`;
-      }
-      if (current >= offset && current <= offset * 2) {
-        stickyProject.style.transform = `translate3d(0,${current - offset}px,0)`;
-      }
-      if (current > offset * 2) {
-        stickyProject.style.transform = `translate3d(0,${offset}px,0)`;
-      }
-    }
-    init();
-    smoothScroll();
   }, []);
 
   return (
@@ -131,56 +81,27 @@ function Intro() {
         </section>
 
         <div className="contentBx">
-          <Header contentBxSection={contentBx} setSection={setContentBx}></Header>
-          {/*
-          <div className="nav">
-            <a className={contentBx ? "ab" : "ab active"} href="#aboutt">
-              About
-            </a>
+          <Header contentBxSection={contentBx} setSection={setContentBx} />
+          <div className="about">
+            <h2 id="aboutt">
+              <span style={{ color: "#222831", fontSize: "0.4em", marginBottom: "7px" }}>Hi, my name is</span>
+              <br />
+              Oxana T.
+              <br />
+              <span className="text-effect" style={{ fontWeight: "lighter", color: "rgb(255, 4, 255)", fontSize: "1em" }}>
+                {" "}
+                I am building web applications.
+              </span>
+            </h2>
 
-            <a className={contentBx ? "pr" : "pr active"} href="#projectss">
-              Projects
-            </a>
-
-            <a className={contentBx ? "cont" : "cont active"} href="#contact">
-              Contact
-            </a>
-
-            <a style={{ padding: "10px" }} className={contentBx ? "res" : "res active"} href="#resume">
-              Resume
-            </a>
+            <p>
+              I’m a front end developer specializing in building <br />
+              and designing exceptional digital experiences.
+              <br />
+              <br />
+            </p>
           </div>
-  */}
-          <h2 id="aboutt">
-            <span style={{ color: "#222831", fontSize: "0.4em", marginBottom: "7px" }}>Hi, my name is</span>
-            <br />
-            Oxana T.
-            <br />
-            <span className="text-effect" style={{ fontWeight: "lighter", color: "rgb(255, 4, 255)", fontSize: "1em" }}>
-              {" "}
-              I am building web applications.
-            </span>
-          </h2>
-
-          <p>
-            I’m a front end developer specializing in building <br />
-            and designing exceptional digital experiences.
-            <br />
-            <br />
-          </p>
-
-          <div className="text-flow">
-            <div class="content__container">
-              <div class="content__container__text">Skills:</div>
-
-              <ul class="content__container__list">
-                <li class="content__container__list__item">HTML{"  "} CSS SASS</li>
-                <li class="content__container__list__item"> JavaScript React Redux</li>
-                <li class="content__container__list__item">Bootstrap Github</li>
-                <li class="content__container__list__item">Figma Gimp</li>
-              </ul>
-            </div>
-          </div>
+          <TextFlow />
 
           <Waypoint bottomOffset="-600px" scrollableAncestor={window} onEnter={() => setContentBx(true)} onLeave={() => setContentBx(false)} />
         </div>
@@ -299,16 +220,9 @@ function Intro() {
             </div>
           </div>
         </div>
-
-        {/*TEST */}
-
-        <div className="scrollable">
-          <div className="project">
-            <h1>Projects</h1>
-          </div>
-        </div>
+        <FloatingTitle />
       </div>
-      <div className="footer" id="contact">
+      <div className="contact" id="contact">
         <h2>Got a project in mind ?</h2>
         <p>
           I'm <span style={{ color: "rgb(255, 4, 255)" }}>currently available</span> and looking to collaborate on new project.
@@ -317,23 +231,10 @@ function Intro() {
         </p>
         <button type="button">GET IN TOUCH</button>
 
-        <div className="wrapperleaf">
-          <div className="leaf-container">
-            <img className="leaf1" src={leaf1} alt=""></img>
-
-            <img className="leaf2" src={leaf2} alt=""></img>
-
-            <img className="leaf3" src={leaf3} alt=""></img>
-          </div>
-        </div>
+        <Leafs />
       </div>
 
-      <div className="why">
-        <span>© 2022 OXANA T. ALL RIGHTS RESERVED.</span>
-        <p>DESIGNED & DEVELOPED BY OXANA T.</p>
-        <p>LINKEDIN</p>
-        <p>GITHUB</p>
-      </div>
+      <Footer />
     </>
   );
 }

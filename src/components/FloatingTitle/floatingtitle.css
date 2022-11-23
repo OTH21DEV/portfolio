@@ -1,0 +1,31 @@
+/*TEST*/
+
+.project {
+    position: absolute;
+    top: 80vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: transparent;
+    mix-blend-mode: difference;
+  }
+  .project h1 {
+    color: whitesmoke;
+    mix-blend-mode: darken;
+  
+    color: rgb(255, 4, 255);
+    font-weight: bold;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 0.1em;
+    font-size: 4em;
+  }
+  
+  .scrollable {
+    width: 100%;
+    background-color: #222831;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+  }
