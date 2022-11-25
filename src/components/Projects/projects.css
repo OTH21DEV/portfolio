@@ -1,0 +1,9 @@
+.container {
+  padding-top: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #222831;
+  padding: 30px 15px;
+}

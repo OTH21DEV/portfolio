@@ -1,5 +1,6 @@
 import React from "react";
 import github from "../../assets/github.svg";
+import './card.css'
 
 function Card({ number, name, description, site, skills, githubLink }) {
   return (

@@ -32,11 +32,11 @@
 }
 
 .leafs {
-  position: relative;
+  position: absolute;
   width: 60%;
 
-  top: -100%;
-  /* left:40%;*/
+ 
+  left:60%;
 }
 
 .leaf-container {
