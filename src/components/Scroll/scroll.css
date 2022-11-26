@@ -11,6 +11,21 @@ section {
   align-items: center;
 }
 
+.title {
+  position: relative;
+
+  z-index: 2;
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+  color: #dddddd;
+  font-family: "Montserrat", sans-serif;
+
+  font-weight: lighter;
+  font-size: 1.8em;
+  letter-spacing: 0.5em;
+}
+
 section .side {
   position: absolute;
   top: 0;
@@ -18,10 +33,6 @@ section .side {
   width: 100%;
   height: 100%;
   background: #222831;
-}
-
-body {
-  min-height: 200vh;
 }
 
 section .side#side1 {

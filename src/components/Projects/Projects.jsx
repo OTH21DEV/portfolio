@@ -16,6 +16,7 @@ import "./projects.css";
 function Projects() {
   return (
     <div className="container" id="projectss">
+    
       <Card
         number={first}
         name={"RESERVIA"}
@@ -105,6 +106,7 @@ function Projects() {
       </div>
       <FloatingTitle />
     </div>
+
   );
 }
 

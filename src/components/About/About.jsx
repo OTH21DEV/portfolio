@@ -1,25 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import Scroll from "../Scroll/Scroll";
+import Header from "../Header/Header";
+import Introduction from "../Introduction/Introduction";
+import TextFlow from "../TextFlow/TextFlow";
+import { Waypoint } from "react-waypoint";
+import "./about.css";
 
 function About() {
-  return (
-    <div className="about" id="aboutt">
-      <h2 >
-        <span style={{ color: "#222831", fontSize: "0.4em", marginBottom: "7px" }}>Hi, my name is</span>
-        <br />
-        Oxana T.
-        <br />
-        <span className="text-effect" style={{ fontWeight: "lighter", color: "rgb(255, 4, 255)", fontSize: "1em" }}>
-          {" "}
-          I am building web applications.
-        </span>
-      </h2>
+  const [contentBx, setContentBx] = useState(true);
 
-      <p>
-        I’m a front end developer specializing in building <br />
-        and designing exceptional digital experiences.
-        <br />
-        <br />
-      </p>
+  return (
+    <div className="wrapper-contentBx">
+      <Scroll />
+
+      <div className="contentBx">
+        <Header contentBxSection={contentBx} setSection={setContentBx} />
+        <Introduction />
+        <TextFlow />
+        <Waypoint bottomOffset="-600px" scrollableAncestor={window} onEnter={() => setContentBx(true)} onLeave={() => setContentBx(false)} />
+      </div>
     </div>
   );
 }

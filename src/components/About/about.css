@@ -1,0 +1,17 @@
+
+.wrapper-contentBx{
+
+    background-color: #222831;
+    margin-top: -40px;
+  }
+  
+
+.contentBx {
+    background-color: #dddddd;
+    padding: 100px;
+    padding-top: 150vh;
+  overflow-x: hidden;
+  
+   /*overflow: hidden;*/
+  }
+  
