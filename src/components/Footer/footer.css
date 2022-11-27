@@ -9,8 +9,15 @@
     background-color: #16a085;
     background-color: #4F5C3B;
     position: relative;
+    flex-wrap:wrap;
+  
   }
   
+  @media all and (min-width: 375px) and (max-width: 500px) {
+    .footer {
+      padding:10px 0;
+    }
+  }
   .footer p,
   .footer span {
     color: #222831;

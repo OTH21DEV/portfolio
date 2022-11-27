@@ -17,6 +17,13 @@ Text flow in the about section
   line-height: 40px;
   color: #ecf0f1;
 }
+@media all and (min-width: 375px) and (max-width: 600px) {
+  .text-flow {
+    font-size:20px;
+    width:300px;
+    margin-top:370px
+  }
+}
 .content__container {
   font-weight: 600;
   overflow: hidden;
@@ -67,6 +74,13 @@ Text flow in the about section
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
+
+@media all and (min-width: 375px) and (max-width: 600px) {
+  .content__container__list {
+    padding-left:63px
+  }
+}
+
 .content__container__list__item {
   line-height: 40px;
   margin: 0;

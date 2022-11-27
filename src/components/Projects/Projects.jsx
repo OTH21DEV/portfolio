@@ -104,6 +104,32 @@ function Projects() {
           </div>
         </div>
       </div>
+
+
+
+      <div className="card">
+        <div className="face face1">
+          <div className="content">
+            <img className="content__project-number" src={eight} alt=""></img>
+            <h3>
+              PLUGIN <br />MODAL
+            </h3>
+          </div>
+        </div>
+
+        <div className="face face2">
+          <div className="content">
+            <p className="content-description">HR web app</p>
+            <a href="https://oth21dev.github.io/OxanaTheis_14_27082022/" type="button">
+              VISIT WEBSITE
+            </a>
+            <div>
+              <span>HTML CSS JS React Redux </span>
+              <img className="web-icon" src={github} alt=""></img>
+            </div>
+          </div>
+        </div>
+      </div>
       <FloatingTitle />
     </div>
 

@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="footer">
     <span>© 2022 OXANA T. ALL RIGHTS RESERVED.</span>
-    <p>DESIGNED & DEVELOPED BY OXANA T.</p>
+    <span>DESIGNED & DEVELOPED BY OXANA T.</span>
     <p>LINKEDIN</p>
     <p>GITHUB</p>
   </footer>

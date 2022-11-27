@@ -27,7 +27,7 @@ function Introduction() {
         <br />
         Oxana T.
         <br />
-        <span className="text-effect" style={{ fontWeight: "lighter", color: "rgb(255, 4, 255)", fontSize: "1em" }}>
+        <span className="text-effect" style={{ fontWeight: "lighter", color: "rgb(255, 4, 255)" }}>
           {" "}
           I am building web applications.
         </span>

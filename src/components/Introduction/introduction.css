@@ -11,6 +11,11 @@
   opacity: 0;
   font-family: "Montserrat", sans-serif;
 }
+@media all and (min-width: 375px) and (max-width: 500px) {
+  .introduction h2 {
+    font-size: 3.8em;
+  }
+}
 
 .introduction span {
   color: #dddddd;
@@ -26,15 +31,20 @@
   line-height: 1.5em;
 }
 
-
 /*
 HEADING 3D : 'I'm building web applications
 */
 .text-effect {
   text-shadow: 0 1px 0 rgb(200, 200, 200), 0 2px 0 rgb(190, 190, 190), 0 3px 0 rgb(180, 180, 180), 0 4px 0 rgb(175, 175, 175), 0 5px 0 rgb(180, 180, 180), 0 6px 0 rgb(190, 190, 190),
     /*ombre*/ 6px 7px 5px rgba(0, 0, 0, 0.4), 6px 12px 10px rgba(0, 0, 0, 0.3), 6px 17px 20px rgba(0, 0, 0, 0.2), 6px 22px 30px rgba(0, 0, 0, 0.1);
+  font-size: 1em;
 }
 
+@media all and (min-width: 375px) and (max-width: 500px) {
+  .text-effect {
+    font-size: 0.8em;
+  }
+}
 
 @keyframes showLi {
   0% {
@@ -47,17 +57,12 @@ HEADING 3D : 'I'm building web applications
   }
 }
 
-
-
-
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
+
+  100% {
+    opacity: 1;
+  }
+}

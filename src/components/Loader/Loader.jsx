@@ -1,29 +1,27 @@
-//import styled, { keyframes } from "styled-components";
 
+import React, { useState, useEffect } from "react";
 import "../../components/Loader/Loader.css";
 import anime from "animejs";
-import React from "react";
-
-
-
 
 function Loader() {
-
+  const [matches, setMatches] = useState(window.matchMedia("(min-width:375px)and (max-width:800px)").matches);
 
   React.useEffect(() => {
+    window.matchMedia("(min-width: 375px)and (max-width:800px)").addEventListener("change", (e) => setMatches(e.matches));
+
     let textWrapper = document.querySelector(".letters");
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-    console.log(textWrapper);
     
-    function preventScroll(e){
+
+    function preventScroll(e) {
       e.preventDefault();
       e.stopPropagation();
-  
+
       return false;
-  }
-  
-    document.querySelector('.wrapper').addEventListener('wheel', preventScroll, {passive: false});
+    }
+
+    document.querySelector(".wrapper").addEventListener("wheel", preventScroll, { passive: false });
     anime
       .timeline({ loop: false })
       .add({
@@ -44,11 +42,23 @@ function Loader() {
         delay: (el, i) => 100 + 30 * i,
       });
   }, []);
-
-  return (
-    <div className="wrapper">
+  /***
+   *  <div className="wrapper">
   <div className="letters">Welcome to my portfolio</div>
   </div>
+   * 
+   */
+  let message = `Welcome \n to \n my portfolio`;
+  return (
+    <div className="wrapper">
+      {matches ? (
+        <div className="letters" style={{ whiteSpace: "pre-line", fontSize: "1.2em" , lineHeight:"1.4em"}}>
+          {message}
+        </div>
+      ) : (
+        <div className="letters">Welcome to my portfolio</div>
+      )}
+    </div>
   );
 }
 

@@ -1,17 +1,21 @@
-
-.wrapper-contentBx{
-
-    background-color: #222831;
-    margin-top: -40px;
-  }
-  
+.wrapper-contentBx {
+  background-color: #222831;
+  margin-top: -40px;
+}
 
 .contentBx {
-    background-color: #dddddd;
-    padding: 100px;
-    padding-top: 150vh;
+  background-color: #dddddd;
+  padding: 100px;
+  padding-top: 150vh;
   overflow-x: hidden;
-  
-   /*overflow: hidden;*/
+
+  /*overflow: hidden;*/
+}
+@media all and (min-width: 375px) and (max-width: 500px) {
+  .contentBx{
+    padding-left: 25px;
+    padding-right:25px;
   }
+
   
+}

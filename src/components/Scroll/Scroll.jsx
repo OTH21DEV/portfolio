@@ -1,8 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import "./scroll.css";
 
 function Scroll() {
+  const [matches, setMatches] = useState(window.matchMedia("(min-width:375px)and (max-width:600px)").matches);
+
   useEffect(() => {
+    window.matchMedia("(min-width: 375px)and (max-width:600px)").addEventListener("change", (e) => setMatches(e.matches));
+    
     let section = document.querySelector("section");
     let side1 = document.getElementById("side1");
     let side2 = document.getElementById("side2");
@@ -22,9 +26,19 @@ function Scroll() {
     });
   }, []);
 
+  let message = `Scroll \n to find more...`;
   return (
     <section>
-      <h2 className="title">Scroll to find more...</h2>
+   {matches ? (
+        <h2 className="title" style={{ whiteSpace: "pre-line", fontSize: "1.2em" , lineHeight:"1.4em"}}>
+          {message}
+        </h2>
+      ) : (
+        <h2 className="title">Scroll to find more...</h2>
+      )}
+
+
+    
 
       <div className="side" id="side1"></div>
       <div className="side" id="side2"></div>

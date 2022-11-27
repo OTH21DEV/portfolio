@@ -9,7 +9,9 @@ body {
   min-height: 200vh;
 
 }
-
+html{
+  width:100%;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
