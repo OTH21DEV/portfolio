@@ -8,16 +8,21 @@
 .leaf1 {
   top: 20%;
   left: 29%;
-  width: 5%;
+  width: 15%;
   transform: rotate(320deg);
   animation: leaf1 5s infinite alternate-reverse;
   filter: drop-shadow(-22px 12px 7px rgba(0, 0, 0, 0.1));
 }
-
+/*
+@media all and (min-width: 375px) and (max-width: 470px) {
+  .leaf1  {
+   width:15%;
+  }
+}*/
 .leaf2 {
   top: 44%;
   left: 27%;
-  width: 3%;
+  width: 13%;
   transform: rotate(110deg);
   animation: leaf2 2s infinite alternate-reverse ease-in-out;
 }
@@ -25,19 +30,35 @@
 .leaf3 {
   top: 73%;
   left: 50%;
-  width: 3%;
+  width: 13%;
   transform: rotate(70deg);
   filter: drop-shadow(22px -12px 7px rgba(0, 0, 0, 0.2));
   animation: leaf3 8s infinite alternate-reverse ease-in-out;
 }
-
+/*
+@media all and (min-width: 375px) and (max-width: 470px) {
+  .leaf2,.leaf3  {
+   width:13%;
+  }
+}*/
 .leafs {
   position: absolute;
-  /*width: 60%;*/
-
- 
-  left:60%;
+  /*width: 60%;
+*/
+width:20%;
+right:0;
+ top:2em;
 }
+/*
+@media all and (min-width: 375px) and (max-width: 470px) {
+  .leafs  {
+    width:20%;
+    left:60%;
+    top:11em;
+    left:19em;
+  }
+}
+*/
 
 .leaf-container {
   position: relative;

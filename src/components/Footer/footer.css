@@ -8,6 +8,7 @@
     justify-content: space-evenly;
     background-color: #16a085;
     background-color: #4F5C3B;
+    background-color: whitesmoke;
     position: relative;
     flex-wrap:wrap;
   
@@ -21,10 +22,11 @@
   .footer p,
   .footer span {
     color: #222831;
+    color:black;
     padding: unset;
     position: relative;
     font-size: 0.8em;
-    color: white;
+   
     font-family: "Bebas Neue", cursive;
     letter-spacing: 0.1em;
   }
