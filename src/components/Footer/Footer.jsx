@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './footer.css'
 
 function Footer() {
@@ -6,8 +7,8 @@ function Footer() {
     <footer className="footer">
     <span>© 2022 OXANA T. ALL RIGHTS RESERVED.</span>
     <span>DESIGNED & DEVELOPED BY OXANA T.</span>
-    <p>LINKEDIN</p>
-    <p>GITHUB</p>
+    <a href  ='https://www.linkedin.com/in/oxana-theis-417922158/'>LINKEDIN</a>
+    <a href ='https://github.com/OTH21DEV'>GITHUB</a>
   </footer>
   )
 }

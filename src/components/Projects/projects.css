@@ -2,10 +2,15 @@
   padding-top: 100px;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   flex-wrap: wrap;
   background: #222831;
   padding: 30px 15px;
+
+  /**/
+  padding-bottom: 108px;
+  align-items: center;
+  justify-content: center;
 }
 @media all and (min-width: 375px) and (max-width: 650px) {
   .container {

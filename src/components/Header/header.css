@@ -23,7 +23,7 @@ NAV HEADER MENU
   align-items: center;
   justify-content: space-evenly;
   list-style-type: none;
-  padding-left:0;
+  padding-left: 0;
 }
 
 /*
@@ -172,7 +172,7 @@ Spesial style of resume link with border animation
   left: 0;
   right: 0;
   bottom: 0;
-  border: 2px dashed #4f5c3b;
+  border: 1px dashed #4f5c3b;
   animation: clippath 2s infinite linear;
 }
 
@@ -181,11 +181,9 @@ Change the initial green border line
 when the view is in the projects section
 */
 
-
 .link-resume.changeColor::before {
   border-color: whitesmoke;
-
-  }
+}
 @keyframes clippath {
   0%,
   100% {

@@ -1,6 +1,6 @@
-.contact{
- /*   background-color: rgb(159, 159, 159);*/
- /*
+.contact {
+  /*   background-color: rgb(159, 159, 159);*/
+  /*
    background-image: url(../../assets/nature.png); 
    
    background-size: contain;
@@ -10,24 +10,24 @@ background-position: center;
     background-size: cover;
     background-attachment: fixed;
    */
-    padding: unset;
-    position: relative;
-    color: whitesmoke;
-    color: rgb(152, 152, 152);
-    color: white;
-   /* background: rgb(221, 221, 221);*/
-   resize: both;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    line-height: 1.75;
-    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  padding: unset;
+  position: relative;
+  color: whitesmoke;
+  color: rgb(152, 152, 152);
+  color: white;
+  /* background: rgb(221, 221, 221);*/
+  resize: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    width:100%;
-    background-color: #f9f5ff;
+  line-height: 1.75;
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
 
-/*
+  width: 100%;
+  background-color: #f9f5ff;
+
+  /*
 
     background-image: url(../../assets/nature.png); 
 
@@ -36,7 +36,7 @@ background-position: center;
 
 */
 
-      /*
+  /*
  background-repeat: no-repeat;
  background-position: center;
      background-size: cover;
@@ -44,100 +44,122 @@ background-position: center;
      background-attachment: fixed;
 */
 
-min-height: 100px;
-   
-  }
-  .test{
-    height: 99999px;
-    object-fit:contain;
-    max-height: 100%;
-    max-width: 100%;    
-    display: block;
-    margin: auto auto;
-  }
-  .contact h2 {
-    font-size: 2em;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    color: black;
-  }
-  
-  .contact p {
-    font-size: 1.1em;
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    color: #222831;
-    /*color:  #16a085;*/
-    font-weight: bold;
-    padding:0 10px;
-    text-align: justify;
-    position:relative;
-  }
-  
-  .contact button {
-    font-family: "Bebas Neue", cursive;
-    margin: 40px 0;
-    font-size: 1.8em;
-    padding: 10px 15px;
-    color: whitesmoke;
-    background: #222831;
-    border: none;
-  }
-  /*test wave*/
+  min-height: 100px;
+}
+.test {
+  height: 99999px;
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+  margin: auto auto;
+}
+.contact h2 {
+  font-size: 2em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: black;
+}
 
-  .wave {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url("https://i.ibb.co/wQZVxxk/wave.png");
-    background: url(../../assets/wave.png);
-    background-size: 1000px 100px;
+.contact p {
+  font-size: 1.1em;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #222831;
+  /*color:  #16a085;*/
+  font-weight: bold;
+  padding: 0 10px;
+  text-align: justify;
+  position: relative;
+}
+
+.contact a {
+  /*
+  font-family: "Bebas Neue", cursive;
+  margin: 40px 0;
+  font-size: 1.8em;
+  padding: 10px 15px;
+  color: whitesmoke;
+  background: #222831;
+  border: none;*/
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  font-weight: bold;
+  margin: 40px 0;
+  font-size: 1.5em;
+  padding: 10px 15px;
+  border: none;
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+  outline: 1px dashed #333;
+  padding: 10px;
+  margin-top: 20px;
+  display: inline-block;
+  width: 170px;
+  background-color: #f9f5ff;
+}
+
+.contact a:hover {
+  background: #333;
+  color: whitesmoke;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+/*test wave*/
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background: url(../../assets/wave.png);
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
   }
-  
-  .wave#wave1 {
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animateWaves 4s linear infinite;
+  100% {
+    background-positon-x: 0px;
   }
-  
-  .wave#wave2 {
-    z-index: 999;
-    opacity: 0.5;
-    bottom: 10px;
-    animation: animate 4s linear infinite !important;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
   }
-  
-  .wave#wave3 {
-    z-index: 1000;
-    opacity: 0.2;
-    bottom: 15px;
-    animation: animateWaves 3s linear infinite;
+  100% {
+    background-positon-x: 0px;
   }
-  
-  .wave#wave4 {
-    z-index: 999;
-    opacity: 0.7;
-    bottom: 20px;
-    animation: animate 3s linear infinite;
-  }
-  
-  @keyframes animateWaves {
-    0% {
-      background-position-x: 1000px;
-    }
-    100% {
-      background-positon-x: 0px;
-    }
-  }
-  
-  @keyframes animate {
-    0% {
-      background-position-x: -1000px;
-    }
-    100% {
-      background-positon-x: 0px;
-    }
-  }
+}

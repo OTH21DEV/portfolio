@@ -1,8 +1,7 @@
 import React from 'react'
-import Leafs from '../Leafs/Leafs'
+
 import './contact.css'
-import green from '../../assets/nature.png'
-//   <img className='test'src={green}alt=""/>
+
 function Contact() {
   return (
     <div className="contact" id="contact">
@@ -21,7 +20,7 @@ function Contact() {
       <br />
       Let's have a conversation about.{" "}
     </p>
-    <button type="button">GET IN TOUCH</button>
+    <a href = "mailto: otheis@protonmail.com">GET IN TOUCH</a>
 
   {/*  <Leafs />*/}
   </div>

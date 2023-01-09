@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+//import test from '../../../public/cv/CV.pdf'
 import "./header.css";
 
 const Header = ({ contentBxSection, setSection }) => {
@@ -36,7 +37,7 @@ const Header = ({ contentBxSection, setSection }) => {
           <li> Contact</li>
         </a>
 
-        <a style={{ padding: "10px" }} className={contentBxSection ? "link-resume" : "link-resume changeColor"} href="#resume">
+        <a target='_blank' rel="noreferrer" href='/cv/CV.pdf'download='CV.pdf' style={{ padding: "10px" }} className={contentBxSection ? "link-resume" : "link-resume changeColor"} >
           <li> Resume</li>
         </a>
       </ul>

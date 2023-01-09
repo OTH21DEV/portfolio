@@ -8,14 +8,12 @@
   padding: 100px;
   padding-top: 150vh;
   overflow-x: hidden;
-
+ 
   /*overflow: hidden;*/
 }
-@media all and (min-width: 375px) and (max-width: 500px) {
-  .contentBx{
+@media all and (min-width: 375px) and (max-width: 800px) {
+  .contentBx {
     padding-left: 25px;
-    padding-right:25px;
+    padding-right: 25px;
   }
-
-  
 }

@@ -7,8 +7,9 @@
     align-items: center;
     justify-content: space-evenly;
     background-color: #16a085;
-    background-color: #4F5C3B;
+    
     background-color: whitesmoke;
+    background-color: #4F5C3B;
     position: relative;
     flex-wrap:wrap;
   
@@ -19,14 +20,15 @@
       padding:10px 0;
     }
   }
-  .footer p,
+  .footer a,
   .footer span {
     color: #222831;
     color:black;
+    color:white;
     padding: unset;
     position: relative;
     font-size: 0.8em;
-   
+   text-decoration: none;
     font-family: "Bebas Neue", cursive;
     letter-spacing: 0.1em;
   }

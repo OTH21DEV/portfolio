@@ -9,7 +9,7 @@ import five from "../../assets/05.svg";
 import six from "../../assets/06.svg";
 import seven from "../../assets/07.svg";
 import eight from "../../assets/08.svg";
-
+import nine from "../../assets/09.svg";
 import github from "../../assets/github.svg";
 import "./projects.css";
 
@@ -38,7 +38,7 @@ function Projects() {
       <Card
         number={three}
         name={"FISH EYE"}
-        description={"hotographers web app"}
+        description={"Photographers web app"}
         site={"https://oth21dev.github.io/OxanaTheis_6_12102021/"}
         skills={"HTML SCSS JS"}
         githubLink={"https://github.com/OTH21DEV/OxanaTheis_6_12102021.git"}
@@ -53,8 +53,19 @@ function Projects() {
         githubLink={"https://github.com/OTH21DEV/OxanaTheis_7_02012022.git"}
       ></Card>
 
-      <Card
+
+
+<Card
         number={five}
+        name={"GAME ON"}
+        description={"Single page Javascript app"}
+        site={"https://oth21dev.github.io/GameOn-website-FR/"}
+        skills={"HTML CSS JS "}
+        githubLink={"https://github.com/OTH21DEV/GameOn-website-FR.git"}
+      ></Card>
+
+      <Card
+        number={six}
         name={"KASA"}
         description={"Real estate web app"}
         site={"https://kasa-oxanatheis.netlify.app/"}
@@ -63,7 +74,7 @@ function Projects() {
       ></Card>
 
       <Card
-        number={six}
+        number={seven}
         name={"SPORT SEE"}
         description={"Sport web app"}
         site={"https://sportsee-p12.herokuapp.com/"}
@@ -72,7 +83,7 @@ function Projects() {
       ></Card>
 
       <Card
-        number={seven}
+        number={eight}
         name={"ARGENT BANK"}
         description={"Bank web app"}
         site={"https://sportsee-p12.herokuapp.com/"}
@@ -80,56 +91,19 @@ function Projects() {
         githubLink={"https://github.com/OTH21DEV/OxanaTheis_13_03082022.git"}
       ></Card>
 
-      <div className="card">
-        <div className="face face1">
-          <div className="content">
-            <img className="content__project-number" src={eight} alt=""></img>
-            <h3>
-              WEALTH <br />
-              HEALTH
-            </h3>
-          </div>
-        </div>
 
-        <div className="face face2">
-          <div className="content">
-            <p className="content-description">HR web app</p>
-            <a href="https://oth21dev.github.io/OxanaTheis_14_27082022/" type="button">
-              VISIT WEBSITE
-            </a>
-            <div>
-              <span>HTML CSS JS React Redux </span>
-              <img className="web-icon" src={github} alt=""></img>
-            </div>
-          </div>
-        </div>
-      </div>
+<Card
+        number={nine}
+        name={"WEALTH HEALTH"}
+        description={"HR web app"}
+        site={"https://oth21dev.github.io/OxanaTheis_14_27082022/"}
+        skills={"HTML CSS JS React Redux "}
+        githubLink={"https://github.com/OTH21DEV/OxanaTheis_14_27082022.git"}
+      ></Card>
 
 
 
-      <div className="card">
-        <div className="face face1">
-          <div className="content">
-            <img className="content__project-number" src={eight} alt=""></img>
-            <h3>
-              PLUGIN <br />MODAL
-            </h3>
-          </div>
-        </div>
-
-        <div className="face face2">
-          <div className="content">
-            <p className="content-description">HR web app</p>
-            <a href="https://oth21dev.github.io/OxanaTheis_14_27082022/" type="button">
-              VISIT WEBSITE
-            </a>
-            <div>
-              <span>HTML CSS JS React Redux </span>
-              <img className="web-icon" src={github} alt=""></img>
-            </div>
-          </div>
-        </div>
-      </div>
+   
       <FloatingTitle />
     </div>
 

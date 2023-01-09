@@ -13,7 +13,7 @@ function About() {
     <div className="wrapper-contentBx">
       <Scroll />
 
-      <div className="contentBx">
+      <div className="contentBx" style={{ backgroundImage: `url(require("../../assets/bg.jpg"))` }}>
         <Header contentBxSection={contentBx} setSection={setContentBx} />
         <Introduction />
         <TextFlow />
