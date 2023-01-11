@@ -3,8 +3,9 @@ Text flow in the about section
 */
 
 .text-flow {
-  margin-top: 150px;
-  margin-top: 220px;
+  margin-top: 80px;
+ 
+
   position: relative;
   color: black;
   width: 456px;
@@ -22,7 +23,7 @@ Text flow in the about section
   .text-flow {
     font-size:20px;
     width:300px;
-    margin-top:370px
+ 
   }
 }
 .content__container {

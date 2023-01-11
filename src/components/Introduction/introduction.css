@@ -1,15 +1,21 @@
 .introduction {
+  
   display: flex;
   flex-direction: column;
-  height: 300px;
-  margin-top: 40px;
+  /*height: 300px;*/
+  /*margin-top: 40px;*/
+
+ 
 }
+
 
 .introduction h2 {
   position: relative;
   font-size: 4em;
   opacity: 0;
   font-family: "Montserrat", sans-serif;
+  color:
+  #222831 ;
 }
 @media all and (min-width: 375px) and (max-width: 500px) {
   .introduction h2 {
@@ -27,8 +33,11 @@
   font-family: "Montserrat", sans-serif;
   text-align: justify;
   opacity: 0;
-  font-size: 1em;
+  font-size: 1.3em;
   line-height: 1.5em;
+  margin-top:40px;
+  color:
+  #222831 ;
 }
 
 /*
@@ -64,5 +73,40 @@ HEADING 3D : 'I'm building web applications
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0;
+  }
+}
+.hero{
+  display:flex;
+}
+.hero-img{
+  width:40%;
+  position: relative;
+opacity:0;
+  margin-right:10px;
+  object-fit: cover;
+}
+.hero-img img{
+  width:100%;
+  position: relative;
+
+}
+@media all and (min-width: 375px) and (max-width: 500px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 500px) {
+  .hero-img{
+    width:100%;
   }
 }
