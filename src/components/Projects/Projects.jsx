@@ -10,13 +10,11 @@ import six from "../../assets/06.svg";
 import seven from "../../assets/07.svg";
 import eight from "../../assets/08.svg";
 import nine from "../../assets/09.svg";
-import github from "../../assets/github.svg";
 import "./projects.css";
 
 function Projects() {
   return (
     <div className="container" id="projectss">
-    
       <Card
         number={first}
         name={"RESERVIA"}
@@ -53,9 +51,7 @@ function Projects() {
         githubLink={"https://github.com/OTH21DEV/OxanaTheis_7_02012022.git"}
       ></Card>
 
-
-
-<Card
+      <Card
         number={five}
         name={"GAME ON"}
         description={"Single page Javascript app"}
@@ -91,8 +87,7 @@ function Projects() {
         githubLink={"https://github.com/OTH21DEV/OxanaTheis_13_03082022.git"}
       ></Card>
 
-
-<Card
+      <Card
         number={nine}
         name={"WEALTH HEALTH"}
         description={"HR web app"}
@@ -101,12 +96,8 @@ function Projects() {
         githubLink={"https://github.com/OTH21DEV/OxanaTheis_14_27082022.git"}
       ></Card>
 
-
-
-   
       <FloatingTitle />
     </div>
-
   );
 }
 

@@ -8,9 +8,6 @@
   padding: 100px;
   padding-top: 165vh;
   overflow-x: hidden;
-/* background: url("../../assets/5141092.jpg")no-repeat;
- position: absolute;*/
-  /*overflow: hidden;*/
 }
 @media all and (min-width: 375px) and (max-width: 800px) {
   .contentBx {
