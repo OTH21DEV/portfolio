@@ -22,6 +22,7 @@ function Loader() {
     }
 
     document.querySelector(".wrapper").addEventListener("wheel", preventScroll, { passive: false });
+    document.querySelector(".wrapper").addEventListener("touchmove", preventScroll, { passive: false });
     anime
       .timeline({ loop: false })
       .add({
