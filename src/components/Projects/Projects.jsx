@@ -82,7 +82,7 @@ function Projects() {
         number={eight}
         name={"ARGENT BANK"}
         description={"Bank web app"}
-        site={"https://sportsee-p12.herokuapp.com/"}
+        site={"https://argent-bank-p13.herokuapp.com/"}
         skills={"HTML CSS JS React Redux API"}
         githubLink={"https://github.com/OTH21DEV/OxanaTheis_13_03082022.git"}
       ></Card>
