@@ -25,11 +25,11 @@ const Header = ({ contentBxSection, setSection }) => {
   return (
     <nav className="nav">
       <ul className="ul">
-        <a className={contentBxSection ? "link-about" : "link-about changeColor"} href="#aboutt">
+        <a className={contentBxSection ? "link-about" : "link-about changeColor"} href="#about">
           <li> About</li>
         </a>
 
-        <a className={contentBxSection ? "link-projects" : "link-projects changeColor"} href="#projectss">
+        <a className={contentBxSection ? "link-projects" : "link-projects changeColor"} href="#projects">
           <li> Projects</li>
         </a>
 

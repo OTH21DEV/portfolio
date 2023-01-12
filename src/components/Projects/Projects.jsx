@@ -14,7 +14,7 @@ import "./projects.css";
 
 function Projects() {
   return (
-    <div className="container" id="projectss">
+    <div className="container" id="projects">
       <Card
         number={first}
         name={"RESERVIA"}

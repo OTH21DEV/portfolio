@@ -22,7 +22,7 @@ function Introduction() {
   }, []);
 
   return (
-    <div className="introduction" id="aboutt">
+    <div className="introduction" id="about">
       <h2>
         <span style={{ color: "#222831", fontSize: "0.4em", marginBottom: "7px" }}>Hi, my name is</span>
         <br />

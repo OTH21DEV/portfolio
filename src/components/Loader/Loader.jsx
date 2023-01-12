@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import "../../components/Loader/Loader.css";
 import anime from "animejs";
@@ -12,16 +11,15 @@ function Loader() {
     let textWrapper = document.querySelector(".letters");
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-    
-
     function preventScroll(e) {
       e.preventDefault();
       e.stopPropagation();
 
       return false;
     }
-
+    //disable scroll mouse wheel desktop
     document.querySelector(".wrapper").addEventListener("wheel", preventScroll, { passive: false });
+    //disable scroll mobile
     document.querySelector(".wrapper").addEventListener("touchmove", preventScroll, { passive: false });
     anime
       .timeline({ loop: false })
@@ -53,7 +51,7 @@ function Loader() {
   return (
     <div className="wrapper">
       {matches ? (
-        <div className="letters" style={{ whiteSpace: "pre-line", fontSize: "1.2em" , lineHeight:"1.4em"}}>
+        <div className="letters" style={{ whiteSpace: "pre-line", fontSize: "1.2em", lineHeight: "1.4em" }}>
           {message}
         </div>
       ) : (
