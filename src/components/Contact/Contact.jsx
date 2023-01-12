@@ -16,7 +16,7 @@ function Contact() {
 
     <h2>Got a project in mind ?</h2>
     <p>
-      I'm <span style={{ color: "rgb(255, 4, 255)" }}>currently available</span> and looking to collaborate on new project.
+      I'm <span style={{ color: "rgb(255, 4, 255)" , fontWeight: "bold", fontFamily: "Bebas Neue", letterSpacing: "0.1em"}}>currently available</span> and looking to collaborate on new project.
       <br />
       Let's have a conversation about.{" "}
     </p>
