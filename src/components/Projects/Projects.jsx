@@ -19,7 +19,7 @@ function Projects() {
       <Card
         number={first}
         name={"PIIQUANTE"}
-        description={"Backend - secure API for a food reviews app"}
+        description={"Backend - build secure API for a food reviews app"}
         site={"https://piiquante-p15.herokuapp.com/"}
         skills={"JS MongoDB Atlas Express Cloudinary Node.js Heroku"}
         githubLink={"https://github.com/OTH21DEV/piiquante-p15.git"}
