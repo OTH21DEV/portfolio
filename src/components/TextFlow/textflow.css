@@ -28,7 +28,7 @@ Text flow in the about section
   font-weight: 600;
   overflow: hidden;
   height: 40px;
-  padding: 0 40px;
+ /* padding: 0 40px;*/
 }
 
 .content__container:before {
@@ -60,6 +60,7 @@ Text flow in the about section
 .content__container__text {
   margin: 0;
   color: black;
+  margin-left:40px;
 }
 
 .content__container__list {
@@ -74,13 +75,13 @@ Text flow in the about section
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
-
+/*
 @media all and (min-width: 375px) and (max-width: 600px) {
   .content__container__list {
     padding-left:63px
   }
 }
-
+*/
 .content__container__list__item {
   line-height: 40px;
   margin: 0;
