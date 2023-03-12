@@ -5,14 +5,15 @@ import "./header.css";
 const Header = ({ contentBxSection, setSection }) => {
   useEffect(() => {
     window.addEventListener("scroll", function (e) {
-      if (window.pageYOffset > 600) {
+      if (window.pageYOffset > 600 || !contentBxSection) {
         console.log("suis plus 600");
         document.querySelector(".nav").classList.add("nav-animation");
         document.querySelector(".link-about").classList.add("link-animation");
         document.querySelector(".link-projects").classList.add("link-animation");
         document.querySelector(".link-contact").classList.add("link-animation");
         document.querySelector(".link-resume").classList.add("link-animation");
-      } else {
+      } 
+      else {
         document.querySelector(".nav").classList.remove("nav-animation");
         document.querySelector(".link-about").classList.remove("link-animation");
         document.querySelector(".link-projects").classList.remove("link-animation");

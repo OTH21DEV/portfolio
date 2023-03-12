@@ -43,7 +43,7 @@ function Introduction() {
           and designing exceptional digital experiences.
           <br />
           <br />
-          Freshed graduated as a <span style={{ color: "#222831", fontWeight: "bold", fontFamily: "Bebas Neue", letterSpacing: "0.1em" }}>Javascript react application developer</span> I acquired the
+          Freshly graduated as a <span style={{ color: "#222831", fontWeight: "bold", fontFamily: "Bebas Neue", letterSpacing: "0.1em" }}>Javascript react application developer</span> I acquired the
           technical background <br />
           by developing the various applications and putting my knowledges into practice.
           <br />

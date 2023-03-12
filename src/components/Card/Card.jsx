@@ -15,12 +15,12 @@ function Card({ number, name, description, site, skills, githubLink }) {
       <div className="face face2">
         <div className="content">
           <p className="content-description">{description}</p>
-          <a className="btn" href={site} type="button">
+          <a className="btn" href={site} type="button" target="_blank" rel="noreferrer">
             VISIT WEBSITE
           </a>
           <div>
             <span>{skills}</span>
-            <a href={githubLink}>
+            <a href={githubLink} target="_blank" rel="noreferrer">
               <img className="web-icon" src={github} alt=""></img>
             </a>
           </div>
