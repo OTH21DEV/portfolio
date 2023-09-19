@@ -30,8 +30,8 @@ function Introduction() {
         <br />
         <span className="text-effect" style={{ fontWeight: "lighter", color: "rgb(255, 4, 255)", marginTop: "10px" }}>
           {" "}
-          I am building web <br />
-          applications.
+          I am  <br />
+          Frontend Developer
         </span>
       </h2>
       <div className="hero">
