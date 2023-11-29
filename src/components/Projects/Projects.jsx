@@ -16,14 +16,22 @@ import "./projects.css";
 function Projects() {
   return (
     <div className="container" id="projects">
-      <Card
+         <Card
+        number={first}
+        name={"SOCIAL NETWORK"}
+        description={"Fullstack- build RESTful API for corporate social network"}
+        site={"https://corporate-social-network-902adf387c2e.herokuapp.com/"}
+        skills={"JS React MySQL Node.js Express Cloudinary Heroku"}
+        githubLink={"https://github.com/OTH21DEV/groupomania_p16"}
+      ></Card>
+      {/* <Card
         number={first}
         name={"PIIQUANTE"}
         description={"Backend - build secure API for a food reviews app"}
         site={"https://piiquante-p15.herokuapp.com/"}
         skills={"JS MongoDB Atlas Express Cloudinary Node.js Heroku"}
         githubLink={"https://github.com/OTH21DEV/piiquante-p15.git"}
-      ></Card>
+      ></Card> */}
 
       <Card
         number={second}
