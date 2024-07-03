@@ -20,7 +20,7 @@ function Projects() {
         number={first}
         name={"LAVCRAFT"}
         description={"FRONTEND REACT WEB APP - build a corporate web site"}
-        site={"https://wwww.lavcraft.com/"}
+        site={"https://www.lavcraft.com/"}
         skills={"JS React Heroku"}
         githubLink={"https://github.com/OTH21DEV/agency_pro.git"}
       ></Card>
